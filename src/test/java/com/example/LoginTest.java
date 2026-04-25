@@ -22,7 +22,7 @@ public class LoginTest {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         driver.findElement(By.id("email")).sendKeys("qasim@malik.com");
-        driver.findElement(By.id("password")).sendKeys("abcdefg");
+        driver.findElement(By.id("password")).sendKeys("abcdcdefg");
         driver.findElement(By.cssSelector("button[type='submit']")).click();
 
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
