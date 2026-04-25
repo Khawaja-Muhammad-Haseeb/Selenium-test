@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/Khawaja-Muhammad-Haseeb/Selenium-Test.git'
+                git branch: 'main', url: 'https://github.com/Khawaja-Muhammad-Haseeb/Selenium-test.git'
             }
         }
         stage('Test') {
