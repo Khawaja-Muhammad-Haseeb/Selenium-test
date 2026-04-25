@@ -27,7 +27,7 @@ pipeline {
             script {
                 sh "git config --global --add safe.directory ${env.WORKSPACE}"
                 def committer = sh(
-                    script: "git log -1 --pretty=format:'%ae'", 
+                    script: "git log -1 --pretty=format:'%ae'",
                     returnStdout: true
                 ).trim()
                 def raw = sh(
