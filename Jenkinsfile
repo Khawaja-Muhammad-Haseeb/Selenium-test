@@ -26,10 +26,7 @@ pipeline {
         always {
             script {
                 sh "git config --global --add safe.directory ${env.WORKSPACE}"
-                def committer = sh(
-                    script: "git log -1 --pretty=format:'%ae'",
-                    returnStdout: true
-                ).trim()
+                def recipient = "m3050413l@gmail.com"
                 def raw = sh(
                     script: "grep -h \"<testcase\" target/surefire-reports/*.xml",
                     returnStdout: true
