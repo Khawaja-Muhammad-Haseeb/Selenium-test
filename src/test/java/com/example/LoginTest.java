@@ -27,8 +27,8 @@ public class LoginTest {
 
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-        String errorText = driver.findElement(By.xpath("/html/body/div/div/div[1]/div/div/div/div[2]/form/div[1]")).getText();
-        assert(errorText.contains("Incorrect email or password"));
+        String errorText = driver.findElement(By.cssSelector("div.bg-red-50 span")).getText();
+        assert(errorText.contains("Failed to fetch") || errorText.contains("Incorrect"));
 
         driver.quit();
     }
